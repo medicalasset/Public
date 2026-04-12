@@ -1,3 +1,5 @@
+## Requires the filename be sampleInput.txt
+
 import csv
 
 def main():
