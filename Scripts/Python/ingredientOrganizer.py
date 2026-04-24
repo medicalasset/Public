@@ -1,5 +1,7 @@
 ## Requires the filename be sampleInput.txt
 
+## TODO: decouple file names for input and output files
+
 import csv
 
 def main():
