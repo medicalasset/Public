@@ -1,6 +1,6 @@
 ## Requires the filename be sampleInput.txt
 
-## TODO: decouple file names for input and output files
+## TODO: Create cli parameters for input/ouput file names
 
 import csv
 
