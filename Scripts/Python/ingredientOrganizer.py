@@ -11,8 +11,8 @@ def main():
     parser = argparse.ArgumentParser(
                     prog='Ingredient Organizer',
                     description='Organizes values from a csv')
-    parser.add_argument('--input_file', default="sampleInput.txt")
-    parser.add_argument('--output_file', default="sampleOutput.txt")
+    parser.add_argument('--input_file', default='sampleInput.txt')
+    parser.add_argument('--output_file', default='sampleOutput.txt')
     args = parser.parse_args()
 
     ## Clearing/creating output file
@@ -31,8 +31,7 @@ def main():
                  sortedInput = sorted(conditionedInput)
                  for ingredient in sortedInput:
                      outputFile.write(ingredient + "\n")
-                 
-                 
+
 
 if __name__ == "__main__":
 
