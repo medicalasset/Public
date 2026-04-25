@@ -9,7 +9,7 @@ def main():
     output_file = "sampleOutput.txt"
     input_file = "sampleInput.txt"
     ## Clearing/creating output file
-    with open("sampleOutput.txt", "w") as outputFile:
+    with open(output_file, "w") as outputFile:
         outputFile.write("")
 
     with open("sampleInput.txt", newline="") as file:
