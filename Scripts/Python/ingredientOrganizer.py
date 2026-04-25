@@ -1,6 +1,3 @@
-## Requires the filename be sampleInput.txt
-
-## TODO: Create cli parameters for input/ouput file names
 
 import csv
 import argparse
