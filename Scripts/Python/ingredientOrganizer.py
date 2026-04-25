@@ -12,11 +12,11 @@ def main():
     with open(output_file, "w") as outputFile:
         outputFile.write("")
 
-    with open("sampleInput.txt", newline="") as file:
+    with open(input_file, newline="") as file:
          fileReader = csv.reader(file, delimiter=",", quotechar='|')
          conditionedInput = []
          for line in fileReader:
-             with open("sampleOutput.txt", "a") as outputFile:
+             with open(output_file, "a") as outputFile:
                  ## Stripping the leading space from each ingredient
                  ## otherwise the sorted method is inconsistent
                  for ingredient in line:
