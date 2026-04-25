@@ -3,20 +3,27 @@
 ## TODO: Create cli parameters for input/ouput file names
 
 import csv
+import argparse
 
 def main():
 
-    output_file = "sampleOutput.txt"
-    input_file = "sampleInput.txt"
+    ## OPTIONAL arguments for file names
+    parser = argparse.ArgumentParser(
+                    prog='Ingredient Organizer',
+                    description='Organizes values from a csv')
+    parser.add_argument('--input_file', default="sampleInput.txt")
+    parser.add_argument('--output_file', default="sampleOutput.txt")
+    args = parser.parse_args()
+
     ## Clearing/creating output file
-    with open(output_file, "w") as outputFile:
+    with open(args.output_file, "w") as outputFile:
         outputFile.write("")
 
-    with open(input_file, newline="") as file:
+    with open(args.input_file, newline="") as file:
          fileReader = csv.reader(file, delimiter=",", quotechar='|')
          conditionedInput = []
          for line in fileReader:
-             with open(output_file, "a") as outputFile:
+             with open(args.output_file, "a") as outputFile:
                  ## Stripping the leading space from each ingredient
                  ## otherwise the sorted method is inconsistent
                  for ingredient in line:
